@@ -18,7 +18,7 @@ router.post('/', (req: Request, res: Response) => {
     if (!stock.symbol || !stock.quantity || !stock.buyPrice) {
         return res.status(400).json({ error: 'Missing required fields' });
     }
-    
+
     portfolio.push(stock);
     res.json(stock);
 });
